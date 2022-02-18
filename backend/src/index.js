@@ -57,6 +57,16 @@ app.put("/todo/:id", async (request, response) => {
     }
 })
 
+// Delete to-do
+app.delete("/todo/:id", (request, response) => {
+    const {id} = request.params;
+    //Delete in DB
+    database.delete().table("todos").where({id: id}).then(() => {
+        return response.status(200).send(true);
+    }).catch(err => {
+        return response.status(500).send(false);
+    });
+})
 
 //End of Routes
 
