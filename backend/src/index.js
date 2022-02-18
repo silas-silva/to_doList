@@ -28,9 +28,22 @@ app.get("/listTodo", (request, response) => {
         return response.status(200).send({todos});
 
     }).catch(err => {
-        return response.json(false);
+        return response.status(500).send(false);
     });
 })
+
+// Add to-do
+app.post("/todo", async (request, response) => {
+    const { description, checked } = request.body;
+    try {
+        //Add in DB
+        await database.insert({ description, checked }).into('todos')
+        return response.status(200).send(true);
+    } catch (error) {
+        return response.status(500).send(false);
+    }
+})
+
 
 
 //End of Routes
