@@ -21,6 +21,18 @@ app.use((request, response, next) => { //configure in cors what can access the b
 
 //Routes
 
+// List to-dos
+app.get("/listTodo", (request, response) => {
+    // fetch to-dos of DB
+    database.select().table("todos").then(todos => {
+        return response.status(200).send({todos});
+
+    }).catch(err => {
+        return response.json(false);
+    });
+})
+
+
 //End of Routes
 
 app.listen(port, (err) => {
