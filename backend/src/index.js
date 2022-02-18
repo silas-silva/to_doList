@@ -44,6 +44,18 @@ app.post("/todo", async (request, response) => {
     }
 })
 
+// Update to-do
+app.put("/todo/:id", async (request, response) => {
+    const {id} = request.params;
+    const { description, checked } = request.body;
+    try {
+        //Update in DB
+        await database.update({ description, checked }).into('todos').where({id : id})
+        return response.status(200).send(true);
+    } catch (error) {
+        return response.status(500).send(false);
+    }
+})
 
 
 //End of Routes
