@@ -1,0 +1,57 @@
+.toDo {
+    height: 50px;
+    margin-top: 25px;
+    display: flex;
+    border-radius: 8px;
+    color: var(--color-words);
+    align-items: center;
+}
+
+.toDo span {
+    width: 80%;
+    font-size: 18px;
+    margin: 7.5px 10px 0 10px;
+}
+
+.toDo input {
+    height: 50%;
+    width: 25px;
+    border: none;
+    background-color: aliceblue;
+    margin-top: 7.5px;
+    margin-left: 4px;
+}
+
+.toDo button {
+    height: 70%;
+    margin-right: 4px;
+    width: 16%;
+    border: none;
+    background-color: var(--color-two);
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--color-words);
+    font-size: 12px;
+    font-weight: bold;
+    border: 3px solid #816e7d;
+}
+
+
+@media screen and (max-width:600px) {
+    .toDo{
+    }
+    .toDo span{
+      width: 100%;
+    }
+
+    .toDo input {
+        margin-left: -35px;
+        height: 35%;
+        width: 25px;
+    }
+
+    .toDo button {
+        margin-right: -35px;
+        width: 26%;
+    }
+  }
