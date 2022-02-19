@@ -1,13 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --color-one: #2f1335;
+  --color-one-two: #9d007a;
+  --color-two: #2b272b;
+  --color-words: #bebcbb;
+  --color-input: #3a3138;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+  background-image: linear-gradient(90deg, var(--color-one), var(--color-one-two));
+  box-sizing: border-box;
+  height: 100%;
+}
+
+a, a:hover{
+  text-decoration: none;
+  color: unset;
+}
+
+.container-one{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container{
+  width: 45%;
+  margin: 0 auto;
+  border: .2px solid #450463;
+  background-color: var(--color-two);
+  box-shadow: 0px 0px 15px 0px #21042e;
+  border-radius: 50px;
+  min-height: 700px;
+  padding: 50px;
+}
+
+@media screen and (max-width:1400px) {
+  .container{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .container{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .container-one{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .container{
+    width: 100%;
+  }
 }
