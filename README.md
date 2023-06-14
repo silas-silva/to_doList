@@ -2,9 +2,6 @@
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/silas-silva/to_doList/blob/master/LICENSE) 
 
 # Sobre o projeto
-
-[link para o projeto online](https://silas-silva.herokuapp.com/todoList)
-
 Um app para Listar seus afazeres, tem o backend, frontend com Web e Mobile
 ## Layout mobile
 ![Mobile 1](https://github.com/silas-silva/to_doList/blob/main/assets/img/mobile1.png)
